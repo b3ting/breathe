@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="start"> Start video </button>
+    <script>
+        const button = document.getElementById("start")
+        button.onclick = () => {
+            let video = document.createElement("video")
+            video.autoplay = true
+            video.loop = true
+            video.src = 'breathe.mp4'
+
+            video.onloadedmetadata = function() {
+                video.requestPictureInPicture()
+                    .catch(err => {
+                        console.error(err)
+                    })
+            }
+        }
+    </script>
+</body>
+</html>
