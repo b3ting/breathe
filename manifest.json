@@ -1,0 +1,11 @@
+{
+  "name": "Breathe gif",
+  "version": "1.0",
+  "description": "Open a gif with Picture in Picture",
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": true
+  },
+  "manifest_version": 2,
+  "browser_action": {}
+}
